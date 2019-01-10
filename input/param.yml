@@ -1,0 +1,42 @@
+fpar: "parameters.lst"         # input parameter file for execution
+
+# Path
+rdseed: "/projects/shzh3924/Softwares/rdseedv5.3.1/rdseed"             # rdseed excutable
+evalresp: "/projects/shzh3924/Softwares/evalresp-3.3.3/evalresp"       # evalresp excutable
+dir_seed: '/scratch/summit/shzh3924/CI_2017/SEED'
+
+# Parameters
+cha: "BHZ"          # channel name
+sr: 10              # target sampling rate
+gap_frac: .2        # maximum allowed gap fraction in input sac record
+t1: 1000            # cutting begining time in sec
+tlen: 84000         # time-record length in sec
+Tmin: 1             # low-corner period of signal filter
+Tmax: 100           # high-corner period of signal filter
+eTmin: -1     # estimated low-corner period of Earthquake signal (-1 for no filter, no effect when tnorm_flag==1)
+eTmax: 10     # estimated high-corner period of Earthquake signal (no effect when tnorm_flag==1)
+ram_hlen: 40        # half len of time window for running average (no effect when tnorm_flag==1)
+sw_hlen: .0002      # half len of frec window for whitenning (no norm if set to 0), set to -1. to use input smoothing file.
+fsmz: "path/to/Seed2Cor/input/Stack.smooth"     # input spectrum reshaping signal file (takes effect only when frechlen==-1)
+max_mem: .6     # maximum memory fraction to be used. (set according to number of threads)
+nthread: 12     # # of threads
+lag: 3000            # cross-correlation signal half length in sec
+min_tlen: 20000      # allowed minimum time length for cross-correlation (takes effect only when ftlen = 1)
+
+# Flag
+fproc:
+  tnorm: 2      # temperal normalization method. (0: no norm, 1: onebit, 2: running average, 3: earthquake cutting)
+  tlen: 1       # turn on/off (1/0) cross-correlation-time-length correction for amplitude
+  prc: 1        # turn on/off (1/0) precursor signal checking
+fdel:
+  sac: 1        # delete original sac files after removing response when set to 1
+  amph: 1      # delete am&ph files after cross-correlation when set to 1
+  par: True  # delete parameter file
+fskip:
+  mklst: True  # skip making list of files
+  wpar: False  # skip writing parameter file
+  ext_sac: 1       # skip ExtractSac() when set to 2, skip upon existence of target file when set to 1
+  rm_resp: 1       # skip RmRESP() when set to 2, skip upon existence of target file when set to 1
+  norm: 1          # skip TempSpecNorm() when set to 2, skip upon existence of target file when set to 1
+  cor: 1           # skip CrossCorr() if target file exists when set to 1
+fout: 0      # 0=monthly, 1=daily, 2=both

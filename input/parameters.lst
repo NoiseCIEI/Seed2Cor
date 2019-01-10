@@ -1,0 +1,29 @@
+/home/leon/software/rdseedv5.3.1/rdseed				char rdsexe[]: rdseed excutable
+/home/leon/software/evalresp-3.3.3/evalresp			char evrexe[]: evalresp excutable
+/work3/leon/breq_fast/station.lst				char stalst[]: station list (J23A -129.6825 +44.844 optional_flag)(flag controls which sta-pairs to be ccd)
+/work3/leon/breq_fast/seed.lst					char seedlst[]: SEED file list (down_US_ALL/OBS_BHZ_2012.FEB.29.203762.seed 2012 2 29)
+LHZ								char ch[]: channel name
+1								int sps: target sampling rate
+0.2								float gapfrac: maximum allowed gap fraction in input sac record
+1000								float t1: cutting begining time in sec
+84000								float tlen: time-record length in sec
+5								float perl: low-corner period of signal filter
+100								float perh: high-corner period of signal filter
+2								int tnorm_flag: temperal normalization method. (0: no norm, 1: onebit, 2: running average, 3: earthquake cutting)
+-1								float Eperl: estimated low-corner period of Earthquake signal (-1 for no filter, no effect when tnorm_flag==1)
+10								float Eperh: estimated high-corner period of Earthquake signal (no effect when tnorm_flag==1)
+40								float timehlen: half len of time window for running average (no effect when tnorm_flag==1)
+0.0002								float frechlen: half len of frec window for whitenning (no norm if set to 0), set to -1. to use input smoothing file.
+path/to/Seed2Cor/input/Stack.smooth				char fwname[]: input spectrum reshaping signal file (takes effect only when frechlen==-1)
+1								int ftlen: turn on/off (1/0) cross-correlation-time-length correction for amplitude
+1                                                               int fprcs: turn on/off (1/0) precursor signal checking
+0.6								float memomax: maximum memory fraction to be used. (set according to number of threads)
+3000								int lagtime: cross-correlation signal half length in sec
+20000								int mintlen: allowed minimum time length for cross-correlation (takes effect only when ftlen = 1)
+1								float fdel1: delete original sac files after removing response when set to 1
+1								float fdel2: delete am&ph files after cross-correlation when set to 1
+1								int fskip1: skip ExtractSac() when set to 2, skip upon existence of target file when set to 1
+1								int fskip2: skip RmRESP() when set to 2, skip upon existence of target file when set to 1
+1								int fskip3: skip TempSpecNorm() when set to 2, skip upon existence of target file when set to 1
+1								int fskip4: skip CrossCorr() if target file exists when set to 1
+0								int CorOutflag: 0=monthly, 1=daily, 2=both

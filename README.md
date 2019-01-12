@@ -90,4 +90,6 @@ A `Python` wrapper `tools/s2c_wrapper.py` with a `YAML` parameter file
 
 # Reference
 
-Bensen, G.D., M.H. Ritzwoller, M.P. Barmin, A.L. Levshin, F. Lin, M.P. Moschetti, N.M. Shapiro, and Y. Yang, Processing seismic ambient noise data to obtain reliable broad-band surface wave dispersion measurements, *Geophys. J. Int.*, 169, 1239-1260, doi: 10.1111/j.1365-246X.2007.03374.x, 2007.
+Bensen, G. D., Ritzwoller, M. H., Barmin, M. P., Levshin, A. L., Lin, F., Moschetti, M. P., et al. (2007). Processing seismic ambient noise data to obtain reliable broad-band surface wave dispersion measurements. *Geophysical Journal International*, 169(3), 1239–1260.
+
+Lin, F.-C., Ritzwoller, M. H., & Shen, W. (2011). On the reliability of attenuation measurements from ambient noise cross-correlations. *Geophysical Research Letters*, 38(11).

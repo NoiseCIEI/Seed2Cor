@@ -87,3 +87,7 @@ A `Python` wrapper `tools/s2c_wrapper.py` with a `YAML` parameter file
 
 - The temperal normalization method of 'earthquake cutting' has NOT been well tested. Use with caution!
 - The spectrum reshape function is currently removed from the code. (`Smooth2()` in `Whiten.c` does nothing)
+
+# Reference
+
+Bensen, G.D., M.H. Ritzwoller, M.P. Barmin, A.L. Levshin, F. Lin, M.P. Moschetti, N.M. Shapiro, and Y. Yang, Processing seismic ambient noise data to obtain reliable broad-band surface wave dispersion measurements, *Geophys. J. Int.*, 169, 1239-1260, doi: 10.1111/j.1365-246X.2007.03374.x, 2007.
